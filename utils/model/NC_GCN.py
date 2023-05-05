@@ -12,7 +12,7 @@ from torch.utils.tensorboard import SummaryWriter
 class GCN(pl.LightningModule):
     """This class define a GCN model for node classification. 
     """
-    def __init__(self, dataset, hparams, writer_acc, writer_loss):
+    def __init__(self, dataset, hparams, writer_acc=None, writer_loss=None):
         """This class define a GCN model for node classification. 
         Args:
             dataset (torch_geometric.data.Dataset): the dataset that contains one positive graph.

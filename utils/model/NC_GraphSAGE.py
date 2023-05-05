@@ -12,7 +12,7 @@ from torch.utils.tensorboard import SummaryWriter
 class GraphSAGE(pl.LightningModule):
     """This class define a GCN model for node classification. 
     """
-    def __init__(self, dataset, input_dim, hparams, writer_acc, writer_loss):
+    def __init__(self, dataset, input_dim, hparams, writer_acc=None, writer_loss=None):
         """This class define a GCN model for node classification. 
         
         Args:
