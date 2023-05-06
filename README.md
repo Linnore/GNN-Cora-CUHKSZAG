@@ -3,7 +3,7 @@ This repo contains GCN  and GraphSAGE implementations for Node Classification an
 #### Size of this repo:
 ~23MB
 ## Introduction
-This project roughly consists of two parts: dataset creation （dataPrep） and GNN application(all jupyter notebooks). Source codes of our data processing and models are under the folder `./utils`. 
+This project roughly consists of two parts: dataset creation （dataPrep） and GNN application(all jupyter notebooks). **Source codes of our data processing and models are under the folder `./utils`.** 
 ## To begin with 
 1. Install anaconda or any other conda.
 2. Create an empty and new environment by `conda create --name yourname python==3.10.9`.
