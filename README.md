@@ -1,6 +1,21 @@
 # GNN-Cora-CUHKSZAG
+----------------------------------------------------------
+## Development Plan:
+- [ ] Experiments on the public split of Cora
+- [ ] Fix potentially wrong design: For inductive learning, current framework split training graph and validation (testing) graph on edge levels. Though non common edges, some traning nodes are in the validation graph, which may result in higher validation (testing) results.
+- [ ] Current mini-batch sampling proposed by GraphSAGE is only enable in negative graph sampling for the linkage prediction task due to the necessity. Should also implement and test mini-batch sampling, even when the full graph can fit into memory (e.g. in the node classification pipelines)
+- [ ] Consider changing the current dataloaders to PyG's official Ligntning data wrapper.
+- [ ] Refactor the training and testing pipelines into `py` scripys.
+- [ ] Add GAT into available models in [Anomaly-Detection-GNN](https://github.com/Linnore/Anomaly-Detection-GNN).
+- [ ] Add GraphSAINT mini-batch sampling strategies in [Anomaly-Detection-GNN](https://github.com/Linnore/Anomaly-Detection-GNN).
+
+## Future Projects on GNN Applications
+GNN-based methods for anomaly detection on various datasets will be implemented in this repo: [Anomaly-Detection-GNN](https://github.com/Linnore/Anomaly-Detection-GNN). 
+
+----------------------------------------------------------
+## Original Commit
 This repo contains Pytorch-Lightning implementations of GCN  and GraphSAGE for Node Classification and Link Prediction (as a way for Recommendation System) on the Cora dataset and CUHKSZ-AG dataset.
-#### Size of this repo:
+**Size of this repo:**
 ~23MB
 ## Introduction
 This project roughly consists of two parts: dataset creation （dataPrep） and GNN application(all jupyter notebooks). **Source codes of our data processing and models are under the folder `./utils`.** 
